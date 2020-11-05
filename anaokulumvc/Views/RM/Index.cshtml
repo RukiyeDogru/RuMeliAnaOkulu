@@ -1,0 +1,280 @@
+﻿@model List<duyuru>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+
+<!-- banner -->
+<div class="banner">
+    <div class="banner-grids">
+        <div class="banner-left">
+            <div class="banner-left1">
+                <div class="banner-left1-grid">
+                    <img src="/Content/Tema2/images/1.jpg" alt=" " class="img-responsive" />
+                    <div class="banner-info">
+                        @*<a class="read-more" href="single.html"><i></i></a>*@
+                        <h3>
+
+                            Muhabbet Kuşlarımız:)
+
+                        </h3>
+                        <div class="event-meta">
+                            @*<h4>Description</h4>*@
+                            <p>Çocuklarımızın birbirleriyle güzel iletişim kurmaları için günde 1 saat sohbet eğitimi yaparız.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-left1-grid">
+                    <img src="/Content/Tema2/images/4.jpg" alt=" " class="img-responsive" />
+                    <div class="banner-info">
+                        @*<a class="read-more" href="single.html"><i></i></a>*@
+                        <h3>
+
+                            Oyun Saatlerimiz:)
+
+                        </h3>
+                        <div class="event-meta">
+                            @*<h4>Description</h4>*@
+                            <p>Çocuklarımızın güzel vakit geçirmesi için günde üç defa birer saat olmak üzere oyun oynarız.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-left2">
+                <div class="banner-left1-grid">
+                    <img src="/Content/Tema2/images/3.jpg" alt=" " class="img-responsive" />
+                    <div class="banner-info">
+                        @*<a class="read-more" href="single.html"><i></i></a>*@
+                        <h3>
+
+                            Zeka Oyunlarımız:)
+
+                        </h3>
+                        <div class="event-meta">
+
+                            <p>Çocuklarımızın zeka gelişimi için günde bir saat zeka oyunları oynarız.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-left1-grid">
+                    <img src="/Content/Tema2/images/2.jpg" alt=" " class="img-responsive" />
+                    <div class="banner-info">
+                        @*<a class="read-more" href="single.html"><i></i></a>*@
+                        <h3>
+
+                            Okuma-Yazma Saatlerimiz:)
+
+                        </h3>
+                        <div class="event-meta">
+                            @*<h4>Description</h4>*@
+                            <p>Okuma-yazma adına günde bir saat ilk adımı bizimle atıyorlar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"> </div>
+        </div>
+        <div class="banner-right">
+            <section class="slider">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <div class="services-grid-right-grid1">
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="services-grid-right-grid2">
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="services-grid-right-grid3">
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!--FlexSlider-->
+            <script defer src="/Content/Tema2/js/jquery.flexslider.js"></script>
+            <script type="text/javascript">
+                $(window).load(function () {
+                    $('.flexslider').flexslider({
+                        animation: "slide",
+                        start: function (slider) {
+                            $('body').removeClass('loading');
+                        }
+                    });
+                });
+            </script>
+            <!--End-slider-script-->
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //banner -->
+<!-- banner-bottom -->
+
+<div class="banner-bottom">
+    <div class="banner-bottom-grids">
+        <div class="col-md-4 banner-bottom-grid">
+            <a name="Hakkimizda"></a>
+            <h3>Rumeli Anaokulu'na  <span>Hoşgeldiniz</span></h3>
+            <h2><i>" Kaliteli eğitimin ilk adresi Rumeli Anaokulları. "</i></h2>
+            <p>
+                Okulumuz 2014 yılında şuanda hizmet verdiği binada eğitim öğretime başlamıştır. Üç sınıf ile hayatına başlayan okulumuz 4. Eğitim-Öğretim yılında 5.sınıf ile eğitim faaliyetlerine devam etmektedir. 10 kişilik sınıflarımızda bir öğretmen ve bir yardımcı öğretmen görev yapmaktadır.
+                <span>
+                    Öğrencilerimiz gün içinde kendi sınıflarının yanı sıra toplam 4 çok amaçlı salonda eğitim faaliyetlerine devam etmektedir.
+                </span>
+            </p>
+
+            @*<div class="tags">
+                    <h4>Tags</h4>
+                    <ul>
+                        <li><a href="single.html">Themes</a></li>
+                        <li><a href="single.html">Art</a></li>
+                        <li><a href="single.html">Music</a></li>
+                        <li><a href="single.html">Entertainment</a></li>
+                        <li><a href="single.html">New</a></li>
+                        <li><a href="single.html">Design</a></li>
+                        <li><a href="single.html">Books</a></li>
+                        <li><a href="single.html">Themes</a></li>
+                        <li><a href="single.html">Art</a></li>
+                        <li><a href="single.html">Music</a></li>
+                        <li><a href="single.html">Entertainment</a></li>
+                        <li><a href="single.html">New</a></li>
+                        <li><a href="single.html">Design</a></li>
+                        <li><a href="single.html">Books</a></li>
+                    </ul>
+                </div>*@
+        </div>
+        <div class="col-md-4 banner-bottom-grid">
+            <h3>Güncel <span>Etkinliklerimiz</span></h3>
+            <div class="load_more">
+                <script>
+                    $(document).ready(function () {
+                        size_li = $("#myList li").size();
+                        x = 1;
+                        $('#myList li:lt(' + x + ')').show();
+                        $('#loadMore').click(function () {
+                            x = (x + 1 <= size_li) ? x + 1 : size_li;
+                            $('#myList li:lt(' + x + ')').show();
+                        });
+                        $('#showLess').click(function () {
+                            x = (x - 1 < 0) ? 1 : x - 1;
+                            $('#myList li').not(':lt(' + x + ')').hide();
+                        });
+                    });
+                </script>
+                <ul id="myList">
+                    <li>
+                        <div class="l_g">
+                            <div class="banner-bottom-grid1">
+                                
+                                
+                                    <div class="col-xs-4 banner-bottom-grid-left">
+                                        <img src="/Content/Tema2/images/8.jpg" alt=" " class="img-responsive" />
+                                    </div>
+                                    <div class="col-xs-8 banner-bottom-grid-left">
+                                        <h4>Boyama Günlerimiz</h4>
+                                    </div>
+                                
+
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="banner-bottom-grid1">
+                                <div class="col-xs-4 banner-bottom-grid-left">
+                                    <img src="/Content/Tema2/images/10.jpg" alt=" " class="img-responsive" />
+                                </div>
+                                <div class="col-xs-8 banner-bottom-grid-left">
+                                    <h4>Kitap Okuma Saatlerimiz</h4>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="banner-bottom-grid1">
+                                <div class="col-xs-4 banner-bottom-grid-left">
+                                    <img src="/Content/Tema2/images/11.jpg" alt=" " class="img-responsive" />
+                                </div>
+                                <div class="col-xs-8 banner-bottom-grid-left">
+                                    <h4>4-5 Yaş Temel Kodlama Derslerimiz</h4>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+
+                        </div>
+                    </li>
+                    @*<li>
+                        <div class="l_g">
+                            <div class="banner-bottom-grid1">
+                                <div class="col-xs-4 banner-bottom-grid-left">
+                                    <img src="/Content/Tema2/images/8.jpg" alt=" " class="img-responsive" />
+                                </div>
+                                <div class="col-xs-8 banner-bottom-grid-left">
+                                    <h4><a href="#">unde omnis iste natus error sit voluptatem</a></h4>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="banner-bottom-grid1">
+                                <div class="col-xs-4 banner-bottom-grid-left">
+                                    <img src="/Content/Tema2/images/9.jpg" alt=" " class="img-responsive" />
+                                </div>
+                                <div class="col-xs-8 banner-bottom-grid-left">
+                                    <h4><a href="#">"Lorem ipsum dolor consectetur adipiscing</a></h4>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="banner-bottom-grid1">
+                                <div class="col-xs-4 banner-bottom-grid-left">
+                                    <img src="/Content/Tema2/images/10.jpg" alt=" " class="img-responsive" />
+                                </div>
+                                <div class="col-xs-8 banner-bottom-grid-left">
+                                    <h4><a href="single.html">culpa qui officia deserunt mollit anim id</a></h4>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+                    </li>*@
+                </ul>
+
+            </div>
+        </div>
+        <div class="col-md-4 banner-bottom-grid">
+            <h3>Okulumuzdan <span>Duyurular</span></h3>
+            <div class="banner-bottom-grid-fig">
+
+
+                <div class="banner-bottom-grid-fig1">
+                    <img src="/Content/Tema2/images/4.jpg" alt=" " class="img-responsive" />
+
+                </div>
+
+                @foreach (var dyr in Model)
+                {
+                    <div class="banner-bottom-grid-fig-grid">
+                        <div class="banner-bottom-grid-fig-grid1">
+                            <h4><span>@dyr.baslik</span>@dyr.icerik</h4>
+                            <p><i class="glyphicon glyphicon-time" aria-hidden="true"></i>@dyr.tarih.Value.ToShortDateString() Ekleyen: @dyr.kullanici.ad @dyr.kullanici.soyad</p>
+                        </div>
+                    </div>
+                }
+                @*<div class="banner-bottom-grid-fig-grid">
+                        <div class="banner-bottom-grid-fig-grid1">
+                            <h4><span>Haber-2</span>Okuma Saatlerimiz İçin Toplu Hikaye Kitabı Alınacaktır.</h4>
+                            <p><i class="glyphicon glyphicon-time" aria-hidden="true"></i>5 Eylül 2018 Ekleyen: Melike Dursun</p>
+                        </div>
+                    </div>
+                            <div class="banner-bottom-grid-fig-grid">
+                        <div class="banner-bottom-grid-fig-grid1">
+                            <h4><span>Haber-3</span>Servise Kayıt Olmak İçin 1 Ekim'e Kadar Okulumuzla İrtibata Geçiniz.</h4>
+                            <p><i class="glyphicon glyphicon-time" aria-hidden="true"></i>1 Eylül 2018 Ekleyen: Melike Dursun</p>
+                        </div>
+                    </div>*@
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //banner-bottom -->

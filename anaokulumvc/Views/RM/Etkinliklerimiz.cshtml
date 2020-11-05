@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Etkinliklerimiz";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+@model List<etkinlik>
+@{
+    ViewBag.Title = "Etkinliklerimiz";
+}
+
+<div class="banner-bottom-grid">
+    <div class="banner-bottom-grids">
+        <div class="col-md-12 banner-bottom-grid-fig-grid">
+
+            <h3>Etkinlik <span>Listesi</span></h3>
+
+        </div>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body p-0">
+        <table class="table table-condensed">
+
+            <thead>
+                <tr>
+                    @*<th style="width:50px;">Resim</th>*@
+                    <th>Etkinlik Adı</th>
+                    <th>Etkinlik Açıklama</th>
+                    <th>Etkinlik Tarihi</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var etkinlik in Model)
+                {
+                    <tr>
+                        @*<td>
+                                <img src="~/Content/Resimler/Kullanici/@ogrt.resim" width="40" />
+                            </td>*@
+                        <td>@etkinlik.ad</td>
+                        <td>@etkinlik.aciklama</td>
+                        <td>@etkinlik.tarih.Value.ToShortDateString()</td>
+
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <!-- /.card-body -->
+</div>
+
+
+

@@ -1,0 +1,152 @@
+﻿@model kullanici
+@{
+    ViewBag.Title = "Kullanıcı Detay";
+}
+
+
+<div class="card card-default">
+    <div class="card-header">
+
+        Kullanıcı Detay
+    </div>
+    <div class="card-body">
+        @*<div class="callout callout-success">
+            <table>
+                <tr>
+                    <td rowspan="2" style="width:70px"><img src="~/Content/Resimler/Kullanici/@Model.resim" width="60" /> </td>
+                    <td> @Model.ad @Model.soyad </td>
+                </tr>
+                <tr>
+
+                    <td> @Model.eposta</td>
+
+                </tr>
+            </table>
+
+        </div>*@
+
+        @Html.Partial("~/Views/Kullanici/Partial/_kullaniciDetay.cshtml",Model)
+
+        <div class="card card-info">
+            <div class="card-header">
+                <h3 class="card-title">Eğitim Bilgileri</h3>
+
+                <div class="card-tools">
+                    <a href="/Kullanici/EgitimEkle/@Model.kullaniciID" class="btn btn-sm btn-success">
+                        <i class="fa fa-plus"></i> Ekle
+                    </a>
+                </div>
+            </div>
+            <div class="card-body">
+                @if (Model.Egitim.Count() > 0)
+                {
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Ad</th>
+                                <th>Yıl</th>
+                                <th>Açıklama</th>
+                                <th>İşlemler</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+                            @foreach (var e in Model.Egitim)
+                            {
+                                <tr>
+                                    <td>@e.ad </td>
+                                    <td>@e.yil</td>
+                                    <td>@e.aciklama</td>
+                                    <td style="width:100px;">
+                                        <a href="/Kullanici/EgitimDuzenle/@e.egitimID" class="btn btn-sm btn-info">
+                                            <i class="fa fa-edit"></i>
+                                        </a>
+                                        <a href="/Kullanici/EgitimSil/@e.egitimID" class="btn btn-sm btn-danger" title="Sil" onclick="return confirm('Silmek İstediğinizden Emin Misiniz?')">
+                                            <i class="fa fa-remove"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+
+                    </table>
+                }
+
+                else
+                {
+                    <div class="alert alert-warning">
+                        Eğitim bilgisi bulunamadı
+                    </div>
+                }
+
+            </div>
+
+
+
+
+        </div>
+
+        <div class="card card-danger">
+
+            <div class="card-header">
+                <h3 class="card-title">Tecrübe Bilgileri</h3>
+
+                <div class="card-tools">
+                    <a href="/Kullanici/TecrubeEkle/@Model.kullaniciID" class="btn btn-sm btn-success">
+                        <i class="fa fa-plus"></i> Ekle
+                    </a>
+                </div>
+            </div>
+            <div class="card card-body">
+                @if (Model.Tecrube.Count() > 0)
+                {
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Ad</th>
+                                <th>Yıl</th>
+                                <th>Açıklama</th>
+                                <th>İşlemler</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var t in Model.Tecrube)
+                            {
+                                <tr>
+                                    <td>@t.ad</td>
+                                    <td>@t.yil</td>
+                                    <td>@t.aciklama</td>
+                                    <td style="width:100px;">
+                                        <a href="/Kullanici/TecrubeDuzenle/@t.tecrubeID" class="btn btn-sm btn-info">
+                                            <i class="fa fa-edit"></i>
+                                        </a>
+                                        <a href="/Kullanici/TecrubeSil/@t.tecrubeID" class="btn btn-sm btn-danger" title="Sil" onclick="return confirm('Silmek İstediğinizden Emin Misiniz?')">
+                                            <i class="fa fa-remove"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+                else
+                {
+                    <div class="alert alert-warning">
+                        Tecrübe bilgisi bulunamadı.
+                    </div>
+                }
+
+            </div>
+
+
+
+
+        </div>
+        
+
+
+
+        </div>
+
+    </div>

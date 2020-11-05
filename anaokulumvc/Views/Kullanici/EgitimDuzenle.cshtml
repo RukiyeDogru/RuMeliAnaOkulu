@@ -1,0 +1,71 @@
+﻿@model Egitim
+@{
+    ViewBag.Title = "EgitimDuzenle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="card card-success">
+    <div class="card-header">
+        <h3 class="card-title">Eğitim Düzenle</h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    @using (Html.BeginForm("EgitimDuzenle", "Kullanici", FormMethod.Post, new { enctype = "multipart / form - data" }))
+    {
+        @Html.HiddenFor(x => x.egitimID)
+
+
+        <div class="card-body">
+
+            @if (ViewBag.Hata != null)
+            {
+                <div class="alert alert-danger alert-dismissible">
+
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+                    <h5>
+                        <i class="icon fa fa-ban"></i>
+                        Dikkat
+                    </h5>
+                    @ViewBag.Hata
+                </div>
+
+
+
+
+            }
+
+            <div class="form-group">
+                <label>Ad</label>
+                @*<input name="ad" class="form-control" id="ad" placeholder="Adınızı giriniz">*@
+                @Html.TextBoxFor(x => x.ad, new { @class = "form-control", @placeholder = "Ad giriniz" })
+
+            </div>
+            <div class="form-group">
+                <label>Yıl</label>
+                @*<input name="soyad" class="form-control" id="soyad" placeholder="Soyadınızı giriniz">*@
+                @Html.TextBoxFor(x => x.yil, new { @class = "form-control", @placeholder = "Yıl giriniz" })
+            </div>
+            <div class="form-group">
+                <label>Açıklama</label>
+                @*<input type="email" name="eposta" class="form-control" id="eposta" placeholder="Epostanızı giriniz">*@
+                @Html.TextBoxFor(x => x.aciklama, new { @class = "form-control", @placeholder = "Açıklama giriniz" })
+            </div>
+
+
+
+
+        </div>
+        <!-- /.card-body -->
+
+        <div class="card-footer">
+            <button type="submit" class="btn btn-success">Kaydet</button>
+        </div>
+    }
+</div>
+
+
+
+
+

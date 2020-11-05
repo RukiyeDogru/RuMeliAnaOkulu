@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Sinif";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+@model List<sinif>
+
+@{
+    ViewBag.Title = "Sinif";
+}
+
+<div class="banner-bottom-grid">
+    <div class="banner-bottom-grids">
+        <div class="col-md-12 banner-bottom-grid-fig-grid">
+
+            <h3>Sınıf <span>Listesi</span></h3>
+            
+            </div>
+        </div>
+            @*<div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Sınıflar</h3>
+
+                </div>*@
+
+            <!-- /.card-header -->
+            <div class="card-body p-0">
+                <table class="table table-condensed">
+
+                    <thead>
+                        <tr>
+                            @*<th style="width:50px;">Resim</th>*@
+                            <th>Ad</th>
+                            <th>Öğretmen Adı Soyadı</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var snf in Model)
+                        {
+                            <tr>
+                                @*<td>
+                                        <img src="~/Content/Resimler/Kullanici/@ogrt.resim" width="40" />
+                                    </td>*@
+                                <td>@snf.ad</td>
+                                <td>@snf.ogretmen.ad  @snf.ogretmen.soyad</td>
+
+
+
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+

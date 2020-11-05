@@ -1,0 +1,70 @@
+﻿@model etkinlik
+@{
+    ViewBag.Title = "EtkinlikDuzenle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card card-success">
+    <div class="card-header">
+        <h3 class="card-title">Duyuru Düzenle</h3>
+    </div>
+    <!-- /.card-header -->
+    <!-- form start -->
+    @using (Html.BeginForm("EtkinlikDuzenle", "Etkinlik", FormMethod.Post, new { enctype = "multipart / form - data" }))
+    {
+        @Html.HiddenFor(x => x.etkinlikID)
+
+
+        <div class="card-body">
+
+            @if (ViewBag.Hata != null)
+            {
+                <div class="alert alert-danger alert-dismissible">
+
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+                    <h5>
+                        <i class="icon fa fa-ban"></i>
+                        Dikkat
+                    </h5>
+                    @ViewBag.Hata
+                </div>
+
+
+
+
+            }
+
+            <div class="form-group">
+                <label>Başlık</label>
+                @*<input name="ad" class="form-control" id="ad" placeholder="Adınızı giriniz">*@
+                @Html.TextBoxFor(x => x.ad, new { @class = "form-control", @placeholder = "Adınızı giriniz" })
+
+            </div>
+            <div class="form-group">
+                <label>İçerik</label>
+                @*<input name="soyad" class="form-control" id="soyad" placeholder="Soyadınızı giriniz">*@
+                @Html.TextBoxFor(x => x.aciklama, new { @class = "form-control", @placeholder = "Soyadınızı giriniz" })
+            </div>
+            <div class="form-group">
+                <label>Tarih</label>
+                @*<input type="email" name="eposta" class="form-control" id="eposta" placeholder="Epostanızı giriniz">*@
+                @Html.TextBoxFor(x => x.tarih, new { @class = "form-control", @placeholder = "Epostanızı giriniz" })
+            </div>
+
+
+
+
+        </div>
+        <!-- /.card-body -->
+
+        <div class="card-footer">
+            <button type="submit" class="btn btn-success">Kaydet</button>
+        </div>
+    }
+</div>
+
+
+
+
+
+
